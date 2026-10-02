@@ -1,0 +1,269 @@
+
+/*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo cuadriculado gris y blanco */
+body {
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(#e5e7eb 1px, transparent 1px),
+    linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+  background-size: 24px 24px; /* tamaño de cada cuadrito */
+}
+
+/* Barra celeste que ocupa todo el ancho del menú */
+/*.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem; /* sin padding vertical: la barra mide lo mismo que el logo */
+  background: #c9ebfa; /* antes #a8dcf5, ahora un poco más claro */
+}
+
+/*.logo img {
+  display: block;
+  height: 197px;
+  width: auto;
+}
+
+/* El menú ya no lleva su propio rectángulo: usa el celeste de la barra */
+/*.menu {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+  color: #1f3a4d;
+  font-size: 1.5rem;   /* antes 1rem (16px), ahora +50% = 24px */
+  font-weight: 500;
+  padding: 0.3rem 0.9rem;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+/*.menu a:hover {
+  background: #ffffff;
+}
+
+/* Botón "Reservar cupo": se distingue del resto de los enlaces del menú */
+/*.menu a.boton {
+  background: #1f3a4d;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+.menu a.boton:hover {
+  background: #16283a;
+  color: #ffffff;
+}
+
+/* Al hacer clic, invierte los colores del botón */
+/*.menu a.boton:active {
+  background: #ffffff;
+  color: #1f3a4d;
+}
+
+/* Texto de párrafo: +10% (16px -> 17.6px) y centrado */
+/*p {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Pantallas chicas: el menú pasa a ser vertical debajo del logo */
+/*@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem 1rem;
+  }
+
+  .logo img {
+    height: 120px; /* logo más chico en pantallas chicas (antes 210px) */
+  }
+
+  /*.menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+  }
+
+  .menu a {
+    text-align: center;
+  }
+
+  .menu a.boton {
+    margin-top: 0.25rem;
+  }
+}
+
+
+
+/* Barra celeste del menú: se achica para ocupar solo la altura del logo */
+header.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 0;
+}
+
+header.navbar .navbar-brand {
+  margin: 0;
+  padding: 0.25rem 0; /* pequeño aire arriba/abajo, ajustable */
+  display: flex;
+  align-items: center;
+}
+
+header.navbar .navbar-brand img {
+  display: block;
+  height: 150px;   /* alto real del logo dentro de la barra: cambiá este valor a gusto */
+  width: auto;    /* mantiene la proporción, ignora el width="180" del HTML */
+}
+
+/* Efecto hover en las primeras 5 opciones del menú (de izquierda a derecha),
+   sin afectar el botón "Reservar cupo" */
+header.navbar .navbar-nav .nav-link {
+  font-size: 1.3rem; /* 30% más grande que el 1rem por defecto de Bootstrap */
+}
+
+/* Efecto hover en las primeras 5 opciones del menú (de izquierda a derecha),
+   sin afectar el botón "Reservar cupo" */
+header.navbar .navbar-nav .nav-item:nth-child(-n+5) .nav-link {
+  transition: color 0.4s ease;
+}
+
+header.navbar .navbar-nav .nav-item:nth-child(-n+5) .nav-link:hover {
+  color: #1f7a99; /* cambiá este color a gusto */
+}
+
+header.navbar .boton-reserva {
+  font-size: 1.3rem; /* mismo +30% que el resto del menú */
+}
+
+header.navbar .boton-reserva {
+  font-size: 1.3rem; /* mismo +30% que el resto del menú */
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+ 
+header.navbar .boton-reserva:hover {
+  background-color: #1f7a99;
+  color: #ffffff;
+  border-color: #1f7a99;
+}
+
+/* Fondo gris claro que encierra la grid 1 y la grid 2 */
+.fondo-gris {
+  background-color: #dfe3e8;
+  padding-bottom: 2rem;
+}
+
+/* Grid de 1 fila x 2 columnas, separadas por 5px */
+.grid-5px {
+  --bs-gutter-x: 5px;
+}
+
+.col1-texto {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.col1-subtexto {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  font-weight: normal;
+  text-align: left;
+}
+
+/* Espacio entre el menú y la imagen de la columna 2 */
+.col2-imagen {
+  margin-top: 4px;
+}
+
+/* Grid de 1 fila x 1 columna, de 600px de alto */
+.grid-600 {
+  height: 600px;
+  margin-top: 2rem;
+  background-color: #f3f4f6; /* gris suave plano */
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column; /* permite empujar la grid anidada al fondo */
+}
+
+/* Título dentro de la grid de 600px */
+.grid600-titulo {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Texto debajo del título de la grid de 600px */
+.grid600-texto {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: left;
+}
+
+/* Grid anidada de 1 fila x 2 columnas dentro de la grid de 600px */
+.grid-anidada {
+  margin-top: auto; /* la baja hasta el final de la grid contenedora */
+}
+
+.anidada-col {
+  min-height: 200px;
+  background-color: #ffffff;
+  border: 1px dashed #9ca3af; /* borde provisorio para ver las columnas, se puede quitar */
+}
+
+/* Texto de la primera columna de la grid anidada */
+.anidada-texto {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 28px;
+  font-weight: normal;
+  text-align: left;
+}
+
+/* Encabezado y lista de la segunda columna de la grid anidada */
+.lista-encabezado {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.lista-operaciones {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  text-align: left;
+  padding-left: 1.25rem;
+}
+
+.lista-operaciones li {
+  margin-bottom: 0.6rem;
+}
+
+/* FOOTER: placeholder, falta diseñar */
+.footer {
+  margin-top: calc(4rem + 200px);
+  padding: 2rem 0;
+  background-color: #1f3a4d;
+  color: #ffffff;
+  text-align: center;
+}
