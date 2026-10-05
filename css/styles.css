@@ -1,112 +1,18 @@
-
-/*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Tipografía global: Roboto (html body gana a Bootstrap sin importar el orden de carga) */
+:root {
+  --bs-body-font-family: "Roboto", sans-serif;
 }
 
-/* Fondo cuadriculado gris y blanco */
+html body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Footer siempre al final de la página, aunque haya poco contenido */
 body {
-  background-color: #ffffff;
-  background-image:
-    linear-gradient(#e5e7eb 1px, transparent 1px),
-    linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
-  background-size: 24px 24px; /* tamaño de cada cuadrito */
-}
-
-/* Barra celeste que ocupa todo el ancho del menú */
-/*.navbar {
+  min-height: 100vh;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem; /* sin padding vertical: la barra mide lo mismo que el logo */
-  background: #c9ebfa; /* antes #a8dcf5, ahora un poco más claro */
+  flex-direction: column;
 }
-
-/*.logo img {
-  display: block;
-  height: 197px;
-  width: auto;
-}
-
-/* El menú ya no lleva su propio rectángulo: usa el celeste de la barra */
-/*.menu {
-  display: flex;
-  gap: 0.5rem;
-  list-style: none;
-  background: transparent;
-  padding: 0.5rem 1rem;
-  border-radius: 16px;
-}
-
-.menu a {
-  display: block;
-  text-decoration: none;
-  color: #1f3a4d;
-  font-size: 1.5rem;   /* antes 1rem (16px), ahora +50% = 24px */
-  font-weight: 500;
-  padding: 0.3rem 0.9rem;
-  border-radius: 10px;
-  transition: background 0.2s;
-}
-
-/*.menu a:hover {
-  background: #ffffff;
-}
-
-/* Botón "Reservar cupo": se distingue del resto de los enlaces del menú */
-/*.menu a.boton {
-  background: #1f3a4d;
-  color: #ffffff;
-  font-size: 1.3rem;
-}
-
-.menu a.boton:hover {
-  background: #16283a;
-  color: #ffffff;
-}
-
-/* Al hacer clic, invierte los colores del botón */
-/*.menu a.boton:active {
-  background: #ffffff;
-  color: #1f3a4d;
-}
-
-/* Texto de párrafo: +10% (16px -> 17.6px) y centrado */
-/*p {
-  font-size: 1.1rem;
-  text-align: center;
-}
-
-/* Pantallas chicas: el menú pasa a ser vertical debajo del logo */
-/*@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem 1rem;
-  }
-
-  .logo img {
-    height: 120px; /* logo más chico en pantallas chicas (antes 210px) */
-  }
-
-  /*.menu {
-    flex-direction: column;
-    width: 100%;
-    gap: 0.25rem;
-    padding: 0.5rem 0;
-  }
-
-  .menu a {
-    text-align: center;
-  }
-
-  .menu a.boton {
-    margin-top: 0.25rem;
-  }
-}
-
-
 
 /* Barra celeste del menú: se achica para ocupar solo la altura del logo */
 header.navbar {
@@ -124,7 +30,7 @@ header.navbar .navbar-brand {
 
 header.navbar .navbar-brand img {
   display: block;
-  height: 150px;   /* alto real del logo dentro de la barra: cambiá este valor a gusto */
+  height: 145.4px;   /* alto real del logo dentro de la barra: cambiá este valor a gusto */
   width: auto;    /* mantiene la proporción, ignora el width="180" del HTML */
 }
 
@@ -164,7 +70,7 @@ header.navbar .boton-reserva:hover {
 /* Fondo gris claro que encierra la grid 1 y la grid 2 */
 .fondo-gris {
   background-color: #dfe3e8;
-  padding-bottom: 2rem;
+  padding-bottom: 0; /* el gris termina justo donde termina el texto de grid600-texto */
 }
 
 /* Grid de 1 fila x 2 columnas, separadas por 5px */
@@ -173,7 +79,7 @@ header.navbar .boton-reserva:hover {
 }
 
 .col1-texto {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Roboto", sans-serif;
   font-size: 50px;
   font-weight: bold;
   text-align: left;
@@ -184,8 +90,8 @@ header.navbar .boton-reserva:hover {
 }
 
 .col1-subtexto {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
   font-weight: normal;
   text-align: left;
 }
@@ -195,75 +101,167 @@ header.navbar .boton-reserva:hover {
   margin-top: 4px;
 }
 
-/* Grid de 1 fila x 1 columna, de 600px de alto */
+/* Grid de 1 fila x 1 columna, alto según el contenido */
 .grid-600 {
-  height: 600px;
+  height: auto;
+  padding: 0; /* la imagen ocupa toda la grid */
   margin-top: 2rem;
   background-color: #f3f4f6; /* gris suave plano */
   border: 1px solid #e5e7eb;
   display: flex;
-  flex-direction: column; /* permite empujar la grid anidada al fondo */
+  flex-direction: column;
+}
+
+/* Imagen al máximo tamaño posible: todo el ancho de la grid */
+.img-momentos {
+  margin: 0;
+  align-self: stretch;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Título dentro de la grid de 600px */
 .grid600-titulo {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 36px;
+  font-family: "Roboto", sans-serif;
+  font-size: 45px;
   font-weight: bold;
   text-align: left;
 }
 
 /* Texto debajo del título de la grid de 600px */
 .grid600-texto {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
   font-weight: normal;
+  margin-bottom: 0;
   text-align: left;
 }
 
-/* Grid anidada de 1 fila x 2 columnas dentro de la grid de 600px */
-.grid-anidada {
-  margin-top: auto; /* la baja hasta el final de la grid contenedora */
-}
-
+/* Grid anidada de 1 fila x 2 columnas: columnas blancas con el contenido centrado verticalmente */
 .anidada-col {
   min-height: 200px;
   background-color: #ffffff;
-  border: 1px dashed #9ca3af; /* borde provisorio para ver las columnas, se puede quitar */
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centrado vertical */
 }
 
-/* Texto de la primera columna de la grid anidada */
+/* Texto de la primera columna (28px + 10%) */
 .anidada-texto {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 28px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30.8px;
   font-weight: normal;
   text-align: left;
+  margin-bottom: 0;
 }
 
-/* Encabezado y lista de la segunda columna de la grid anidada */
+/* Encabezado y lista de la segunda columna (20px y 18px + 10%) */
 .lista-encabezado {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
   font-weight: bold;
   text-align: left;
 }
 
 .lista-operaciones {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-size: 26px;
   text-align: left;
   padding-left: 1.25rem;
+  margin-bottom: 0;
 }
 
 .lista-operaciones li {
   margin-bottom: 0.6rem;
 }
 
-/* FOOTER: placeholder, falta diseñar */
+.lista-operaciones li:last-child {
+  margin-bottom: 0;
+}
+
+/* FOOTER */
 .footer {
-  margin-top: calc(4rem + 200px);
-  padding: 2rem 0;
+  margin-top: auto; /* empuja el footer al borde inferior */
+  padding: 2.5rem 0;
   background-color: #1f3a4d;
   color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+}
+
+.footer-fila {
+  align-items: center;
+  row-gap: 1.5rem;
+}
+
+.footer-nombre {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.footer-detalle {
+  font-size: 18px;
+  margin-bottom: 0;
+  color: #c9ebfa;
+}
+
+.footer-contactos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.9rem 1.5rem;
+}
+
+.footer-contactos a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contactos i {
+  font-size: 1.6rem;
+  width: 2rem;
   text-align: center;
+  color: #c9ebfa;
+  transition: color 0.3s ease;
+}
+
+.footer-contactos a:hover,
+.footer-contactos a:hover i {
+  color: #7fd0ee;
+}
+
+/* Fondo gris claro en toda la página */
+body {
+  background-color: #dfe3e8;
+}
+
+/* Las dos cards quedan separadas por 2px (horizontal y vertical) */
+.cards-2px {
+  --bs-gutter-x: 2px;
+  --bs-gutter-y: 2px;
+}
+
+/* Botón de inscripción igual al del menú (aplica también fuera del header) */
+.boton-reserva {
+  font-size: 1.3rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.boton-reserva:hover,
+.boton-reserva:focus {
+  background-color: #1f7a99;
+  color: #ffffff;
+  border-color: #1f7a99;
 }

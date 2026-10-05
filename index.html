@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 
@@ -17,30 +21,29 @@
  
 
   <header class="navbar navbar-expand-lg" style="background:#c9ebfa;">
-    <div class="container-fluid">
-      <a href="index.html" class="navbar-brand">
-        <img src="/assets/img/RAG2.png" alt="Nombre de la empresa">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <nav class="collapse navbar-collapse" id="menuPrincipal">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#servicios">Video</a></li>
-          <li class="nav-item"><a class="nav-link" href="pages/metodos.html">Metodos</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#nosotros">Cursos</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#contacto">Inscripcion</a></li>
-          <li class="nav-item">
-            <a href="index.html#inscripcion" class="btn boton-reserva">Reservar cupo</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+   <div class="container">
+    
+    <a href="/" class="navbar-brand">
+      <img src="/assets/img/RAG2.png" alt="Nombre de la empresa">
+    </a>
 
-  <!-- FONDO GRIS: encierra la grid 1 y la grid 2 -->
-  <section class="fondo-gris">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <nav class="collapse navbar-collapse" id="menuPrincipal">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="/index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="/index.html#servicios">Video</a></li>
+        <li class="nav-item"><a class="nav-link" href="/pages/metodos.html">Metodos</a></li>
+        <li class="nav-item"><a class="nav-link" href="/pages/cursos.html">Cursos</a></li>
+          <a href="/pages/inscripcion.html" class="btn boton-reserva">Inscripción</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+ 
+</header>
 
   <div class="container">
     <div class="row grid-5px">
@@ -58,33 +61,30 @@
   <div class="container">
     <div class="row">
       <div class="col-12 grid-600">
-        <h2 class="grid600-titulo">Qué significa planificar</h2>
-        <p class="grid600-texto">Planificar no es predecir el futuro ni redactar un documento anual. Es el cálculo que precede y preside la acción: pensar antes de actuar, sostener ese pensamiento mientras se actúa y corregirlo cuando la realidad responde.</p>
-
-        <!-- GRID ANIDADA: 1 fila x 2 columnas -->
-        <div class="row grid-anidada">
-          <div class="col-6 anidada-col">
-            <p class="anidada-texto">Quien planifica reconoce que no controla todas las variables, que hay otros actores con planes propios y que el futuro es incierto. Planifica, justamente, por eso.</p>
-          </div>
-          <div class="col-6 anidada-col">
-            <p class="lista-encabezado">En la práctica, planificar significa cuatro operaciones que se repiten en ciclo, no una detrás de otra:</p>
-            <ul class="lista-operaciones">
-              <li><strong>Explicar la situación.</strong> Entender por qué los problemas existen y quién los sostiene, no solo describirlos.</li>
-              <li><strong>Diseñar el plan.</strong> Definir qué resultados se busca producir y con qué operaciones concretas.</li>
-              <li><strong>Analizar la viabilidad.</strong> Verificar si hay poder, recursos y tiempo para sostener lo decidido.</li>
-              <li><strong>Actuar y recalcular.</strong> Ejecutar, medir lo que cambió y ajustar el plan antes de que el plan quede viejo.</li>
-            </ul>
-          </div>
-        </div>
+        
+        <img src="/assets/img/momentos.png" alt="Momentos" class="img-fluid img-momentos">  
+        
       </div>
     </div>
   </div>
 
-  </section>
-
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <p>Footer</p>
+      <div class="row footer-fila">
+        <div class="col-12 col-md-5 footer-identidad">
+          <h3 class="footer-nombre">Mg. Rubén Alfredo Gómez</h3>
+          <p class="footer-detalle">Formación en planificación estratégica</p>
+        </div>
+        <div class="col-12 col-md-7">
+          <ul class="footer-contactos">
+            <li><a href="mailto:rubengomez@mdp.edu.ar"><i class="bi bi-envelope-fill"></i><span>rubengomez@mdp.edu.ar</span></a></li>
+            <li><a href="https://wa.me/5492234241552" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i><span>2234-241552</span></a></li>
+            <li><a href="https://www.facebook.com/search/top?q=Ruben%20Alfredo%20G%C3%B3mez" target="_blank" rel="noopener"><i class="bi bi-facebook"></i><span>Ruben Alfredo Gómez</span></a></li>
+            <li><a href="https://x.com/rubengomez1963" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i><span>@rubengomez1963</span></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </footer>
 
@@ -92,6 +92,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
     
