@@ -8,22 +8,31 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <style>
-        /* Fondo gris claro en toda la página */
-        body {
-            background-color: #dfe3e8;
-        }
-
         /* Las dos cards quedan separadas por 2px (horizontal y vertical) */
         .cards-2px {
             --bs-gutter-x: 2px;
             --bs-gutter-y: 2px;
         }
+
+        /* Texto +20% solo en Métodos */
+        .pagina-metodos .grid600-titulo    { font-size: 54px; }    /* antes 45px */
+        .pagina-metodos .grid600-texto     { font-size: 36px; }    /* antes 30px */
+        .pagina-metodos .anidada-texto     { font-size: 33.3px; }  /* columna 1: 37px -10% */
+        .pagina-metodos .lista-encabezado  { font-size: 32.4px; }  /* columna 2: 36px -10% */
+        .pagina-metodos .lista-operaciones { font-size: 28.1px; }  /* columna 2: 31.2px -10% */
+
+        /* Sección "Dos métodos, dos escalas" */
+        .pagina-metodos h1                 { font-size: 3rem; }    /* antes 2.5rem */
+        .pagina-metodos .h5                { font-size: 1.5rem; }  /* antes 1.25rem */
+        .pagina-metodos .card-title        { font-size: 2.16rem; } /* 1.8rem +20% */
+        .pagina-metodos .card-text,
+        .pagina-metodos .text-muted        { font-size: 1.44rem; } /* 1.2rem +20% */
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="pagina-metodos">
 
     <header class="navbar navbar-expand-lg" style="background:#c9ebfa;">
    <div class="container">
@@ -42,9 +51,6 @@
         <li class="nav-item"><a class="nav-link" href="/index.html#servicios">Video</a></li>
         <li class="nav-item"><a class="nav-link" href="/pages/metodos.html">Metodos</a></li>
         <li class="nav-item"><a class="nav-link" href="/pages/cursos.html">Cursos</a></li>
-        <li class="nav-item">
-          <a href="/index.html#inscripcion" class="btn boton-reserva">Inscripción</a>
-        </li>
       </ul>
     </nav>
   </div>
@@ -86,6 +92,13 @@
                         <p class="text-muted mb-1">PES</p>
                         <h3 class="card-title h4">Planificación Estratégica Situacional</h3>
                         <p class="card-text">Método desarrollado por Carlos Matus para la alta dirección. Parte de una idea incómoda: no existe un diagnóstico único y objetivo de la realidad. Cada actor explica la situación desde su propia posición, y planificar consiste en actuar sabiendo que los demás también planifican.</p>
+                        <p class="card-text fw-bold mb-2">¿Por qué implementar la PES en tu organización?</p>
+                        <ul class="card-text">
+                            <li><strong>Flexibilidad absoluta:</strong> Permite reaccionar y pivotar de manera oportuna ante crisis o cambios imprevistos en el mercado.</li>
+                            <li><strong>Enfoque en problemas reales:</strong> Prioriza las áreas críticas que verdaderamente frenan el desarrollo institucional.</li>
+                            <li><strong>Visión de actores:</strong> Considera las motivaciones, recursos y posibles resistencias de la competencia o aliados estratégicos.</li>
+                            <li><strong>Cultura de viabilidad:</strong> No genera planes perfectos imposibles de aplicar; genera rutas de acción realistas y ejecutables.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -97,6 +110,13 @@
                         <p class="text-muted mb-1">MAPP</p>
                         <h3 class="card-title h4">Método Altadir de Planificación</h3>
                         <p class="card-text">La versión ligera del mismo enfoque, creada por la fundación Altadir para equipos que necesitan un plan en días y no en meses. Se trabaja en taller, con el grupo que va a ejecutar, sobre un solo problema bien delimitado.</p>
+                        <p class="card-text fw-bold mb-2">¿Por qué implementar el MAPP en tu organización?</p>
+                        <ul class="card-text">
+                            <li><strong>Resultados en días:</strong> Un taller intensivo produce un plan de acción concreto, sin esperar meses de diagnóstico.</li>
+                            <li><strong>Foco en un solo problema:</strong> Concentra al equipo en la dificultad que más impacta, en lugar de dispersarse en planes generales.</li>
+                            <li><strong>Compromiso de quien ejecuta:</strong> El plan lo construye el mismo grupo que lo va a llevar adelante, por eso nace con responsables y apropiación.</li>
+                            <li><strong>Bajo costo de entrada:</strong> Requiere poco tiempo y pocos recursos, y sirve como primer paso antes de encarar una planificación de mayor escala.</li>
+                        </ul>
                     </div>
                 </div>
             </div>

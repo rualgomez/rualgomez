@@ -12,6 +12,13 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  /* Fondo: imagen de planificación estratégica (azul más oscuro que el menú) */
+  background-color: #6fa8cd; /* respaldo mientras carga la imagen */
+  background-image: url("/assets/img/fondo-planificacion.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* Barra celeste del menú: se achica para ocupar solo la altura del logo */
@@ -87,6 +94,7 @@ header.navbar .boton-reserva:hover {
   flex-direction: column;
   justify-content: center;
   min-height: 100%;
+  color: #ffffff;
 }
 
 .col1-subtexto {
@@ -94,6 +102,7 @@ header.navbar .boton-reserva:hover {
   font-size: 30px;
   font-weight: normal;
   text-align: left;
+  color: #ffffff;
 }
 
 /* Espacio entre el menú y la imagen de la columna 2 */
@@ -238,11 +247,6 @@ header.navbar .boton-reserva:hover {
 .footer-contactos a:hover,
 .footer-contactos a:hover i {
   color: #7fd0ee;
-}
-
-/* Fondo gris claro en toda la página */
-body {
-  background-color: #dfe3e8;
 }
 
 /* Las dos cards quedan separadas por 2px (horizontal y vertical) */
